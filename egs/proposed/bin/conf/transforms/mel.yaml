@@ -1,0 +1,12 @@
+_target_: promptttspp.transforms.MelSpectrogramTransform
+sample_rate: 24000
+n_fft: 512
+win_length: 480
+hop_length: 240
+power: 1
+f_min: 63
+f_max: 12000
+n_mels: 80
+mel_scale: slaney
+norm: slaney
+center: True

@@ -1,0 +1,21 @@
+defaults:
+  - _self_
+  - model: prompttts_mdn_v2_cfg
+  - optimizer: adamw
+  - train: noam
+  - dataset: mel
+  - transforms: mel
+  - path: default
+
+hydra:
+  run:
+    dir: ./out/hydra/train
+  output_subdir: null
+  job_logging:
+    formatters:
+      simple:
+        format: '[%(asctime)s][%(levelname)s][%(module)s | %(lineno)s] %(message)s'
+    disable_existing_loggers: false
+
+output_dir: ./out
+ckpt_path: null

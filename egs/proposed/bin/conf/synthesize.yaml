@@ -1,0 +1,28 @@
+defaults:
+  - _self_
+  - model: prompttts_mdn_v2_wo_erg
+  - transforms: mel
+  - train: noam
+  - path: default
+  - vocoder: bigvgan_f0
+
+hydra:
+  run:
+    dir: ./out/hydra/synthesize
+  output_subdir: null
+  job_logging:
+    formatters:
+      simple:
+        format: '[%(asctime)s][%(levelname)s][%(module)s | %(lineno)s] %(message)s'
+    disable_existing_loggers: false
+
+label_file: ${.path.filtered_eval_file}
+output_dir: ./out/generate
+ckpt_path: ./out/ckpt/last.ckpt
+vocoder_ckpt_path: path/to/your/pretrained/bigvgan_f0_full/ckpt/last.ckpt
+batch_size: 16
+
+eval_out_dir: ./out/eval
+sclite: ${.path.sclite}
+
+use_spk_prompt: true

@@ -1,0 +1,15 @@
+seed: 42
+
+num_epochs: 1000
+save_interval: 20
+
+batch_size: 32
+num_workers: 8
+
+fp16: false
+
+lr_scheduler:
+  _target_: promptttspp.utils.lr_scheduler.NoamLR
+  warmup_steps: 4000
+
+per_epoch_scheduler: false

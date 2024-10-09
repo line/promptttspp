@@ -1,0 +1,29 @@
+# The repository root
+# NOTE: users must set this path correctly
+root: path/to/your/promptttspp
+
+# The data directory containing wav and textgrid files
+data_root: ${.root}/data_prep/out/libritts_r_per_spk_cleaned
+
+# Metadata with style prompt tags
+data_csv_file: ${.root}/metadata/metadata_w_style_prompt_tags_v230922.csv
+
+# dump: pre-processed features will be stored
+data_dir: ${.root}/dump/libritts_r_per_spk_cleaned
+text_dir: ${.data_dir}/text
+
+feats_dir: ${.data_dir}/feats
+df_dir: ${.data_dir}/df
+filtered_df_dir: ${.data_dir}/df_filtered
+mel_dir: ${.data_dir}/mel63
+
+data_file: ${.df_dir}/data.csv
+train_file: ${.filtered_df_dir}/trn.csv
+valid_file: ${.filtered_df_dir}/val.csv
+eval_file: ${.df_dir}/eval.csv
+filtered_eval_file: ${.filtered_df_dir}/eval_filtered.csv
+
+speaker_file: ${.root}/data_prep/external/speakers.tsv
+f0_stats_file: ${.root}/metadata/libritts_r_f0_stats.yaml
+prompt_candidate_file: ${.root}/metadata/style_prompt_candidates_v230922.csv
+spk_prompt_candidate_file: ${.root}/metadata/speaker_prompt_candidates_v230922.csv

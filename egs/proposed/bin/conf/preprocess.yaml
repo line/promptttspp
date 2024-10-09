@@ -1,0 +1,20 @@
+defaults:
+  - _self_
+  - transforms: mel
+  - path: default
+
+hydra:
+  run:
+    dir: ./out/hydra/preprocess
+  output_subdir: null
+  job_logging:
+    formatters:
+      simple:
+        format: '[%(asctime)s][%(levelname)s][%(module)s | %(lineno)s] %(message)s'
+    disable_existing_loggers: false
+
+eval_ids: [1188, 1995, 260, 1284, 2300, 237, 908, 1580, 121, 1089]
+n_jobs: 10
+
+wav_min_sec: 3
+wav_max_sec: 10

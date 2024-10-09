@@ -1,0 +1,17 @@
+defaults:
+  - _self_
+  - model: prompttts_mdn_v2_wo_erg_final_demo
+  - vocoder: bigvgan_f0
+  - transforms: mel
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled  
+
+hydra:
+  run:
+    dir: ./
+  output_subdir: null
+
+# 
+model_ckpt_path: ./pretrained_model/checkpoint/proposed/last.ckpt
+vocoder_ckpt_path: ./pretrained_model/checkpoint/bigvgan_f0_full/last.ckpt
+mel_stats_file: ./pretrained_model/checkpoint/stats.yaml

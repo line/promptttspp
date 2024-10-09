@@ -1,0 +1,26 @@
+collator:
+  _target_: promptttspp.datasets.prompttts.PromptTTSCollator
+
+train:
+  _target_: promptttspp.datasets.all_with_spk_prompt_norm.AllWithSpkPromptNormDataset
+  file_path: ${...path.train_file}
+  data_root: ${...path.data_root}
+  feats_dir: ${...path.feats_dir}
+  mel_dir: ${...path.mel_dir}
+  prompt_candidate_file: ${...path.prompt_candidate_file}
+  spk_prompt_candidate_file: ${...path.spk_prompt_candidate_file}
+
+valid:
+  _target_: promptttspp.datasets.all_with_spk_prompt_norm.AllWithSpkPromptNormDataset
+  file_path: ${...path.valid_file}
+  data_root: ${...path.data_root}
+  feats_dir: ${...path.feats_dir}
+  mel_dir: ${...path.mel_dir}
+  prompt_candidate_file: ${...path.prompt_candidate_file}
+  spk_prompt_candidate_file: ${...path.spk_prompt_candidate_file}
+
+dynamic_batch: true
+
+# NOTE: 10000 should also work OK
+# number of batches will be 6908 if max_token=30000.
+max_tokens: 10000
