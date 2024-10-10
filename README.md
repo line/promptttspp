@@ -1,4 +1,6 @@
-# PromptTTS++
+# PromptTTS++: Controlling Speaker Identity in Prompt-Based Text-to-Speech Using Natural Language Descriptions
+
+You can check the [paper](https://arxiv.org/abs/2309.08140) and [huggingface demo](https://huggingface.co/spaces/line-corporation/promptttspp).
 
 ## Installation
 
@@ -94,6 +96,17 @@ This repository contains the code used for experiments during internship. It inc
 
 ## License
 [Apache License 2.0](LICENSE)
+
+## Citation
+```
+@inproceedings{promptttspp,
+    authors={Reo Shimizu, Ryuichi Yamamoto, Masaya Kawamura, Yuma Shirahata, Hironori Doi, Tatsuya Komatsu, Kentaro Tachibana},
+    title={PromptTTS++: Controlling Speaker Identity in Prompt-Based Text-To-Speech Using Natural Language Descriptions},
+    booktitle={Proc. ICASSP 2024},
+    pages={12672-12676},
+    year={2024},
+}
+```
 
 ## Acknowledgements
 
