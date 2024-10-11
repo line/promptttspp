@@ -35,7 +35,7 @@ pip install -e .
 
 ## Demo
 
-We provide pre-trained models and demo on [Hugging Face (WIP)](). If you want to run the models locally, please follow the instructions below.
+We provide pre-trained models and demo on [Hugging Face](https://huggingface.co/spaces/line-corporation/promptttspp). If you want to run the models locally, please follow the instructions below.
 Note that a pretrained BigVGAN must be used as a vocoder to synthesize speech.
 
 Please modify the following path in `egs/proposed/bin/conf/demo.yaml`:
